@@ -14,7 +14,9 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  openvpn3 = pkgs.callPackage ./pkgs/openvpn3 { };
+  openvpn3 = pkgs.callPackage ./pkgs/openvpn3 { 
+    inherit (python3Packages) docutils jinja2;
+  };
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
   # ...
 }
