@@ -14,7 +14,7 @@
 , openssl
 , protobuf
 , python3
-, tinyxml
+, tinyxml-2
 
 , docutils
 , jinja2
@@ -22,7 +22,7 @@
 
 stdenv.mkDerivation rec {
   pname = "openvpn3";
-  version = "13_beta";
+  version = "16_beta";
 
   src = fetchFromGitHub {
     owner = "OpenVPN";
@@ -30,7 +30,7 @@ stdenv.mkDerivation rec {
     rev = "v${version}";
     fetchSubmodules = true;
     leaveDotGit = true;
-    sha256 = "087y3j8ndfbw71igv5gk4i7qmyga2ly74v62wpjyfwx0p4cp8wky";
+    sha256 = "mhzckUD9pLYLChkwwcF3JW21Jts+h8jgZRICbL7eEBI=";
   };
 
   postPatch = ''
@@ -58,7 +58,7 @@ stdenv.mkDerivation rec {
     lz4
     openssl
     protobuf
-    tinyxml
+    tinyxml-2
   ];
 
   configureFlags = [ "--disable-selinux-build" ];
