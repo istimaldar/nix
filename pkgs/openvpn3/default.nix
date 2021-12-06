@@ -30,7 +30,7 @@ stdenv.mkDerivation rec {
     rev = "v${version}";
     fetchSubmodules = true;
     leaveDotGit = true;
-    sha256 = "mhzckUD9pLYLChkwwcF3JW21Jts+h8jgZRICbL7eEBI=";
+    sha256 = "n8mr2YAUR6oOnZMSI1oX53yActU0zVehiSX+lMFnogs=";
   };
 
   postPatch = ''
